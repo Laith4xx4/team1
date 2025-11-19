@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:team1/features/auth1/presentation/bloc/auth_state.dart';
 import 'package:team1/features/auth1/domain/use_cases/login_user.dart';
 import 'package:team1/features/auth1/domain/use_cases/register_user.dart';
@@ -80,8 +81,13 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   // ====================== 🚪 تسجيل الخروج ======================
-  void logout() {
+  void logout() async {
+    // حذف التوكن من SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove("token");
+
+    // إعادة الحالة للبداية
     emit(AuthInitial());
-    // يمكنك إضافة منطق آخر لتسجيل الخروج هنا، مثل حذف التوكن من التخزين المحلي.
   }
+
 }

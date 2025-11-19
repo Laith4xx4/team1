@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:team1/features/auth1/data/datasource/auth_api_service.dart'; // Import AuthApiService
 import 'package:team1/features/auth1/presentation/bloc/auth_cubit.dart'; // Import Authlaithshop
 import 'package:team1/features/auth1/presentation/bloc/auth_state.dart'; // Import AuthState
-import 'package:flutter_bloc/flutter_bloc.dart'; // Import flutter_bloc
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:team1/features/auth1/presentation/pages/login_screen.dart'; // Import flutter_bloc
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

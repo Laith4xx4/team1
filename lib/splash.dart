@@ -45,7 +45,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1F0055), // purple background
+      backgroundColor: const Color(0xFF129AA6), // purple background
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min, // لتوسيط المحتوى عموديًا

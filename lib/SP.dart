@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:team1/features/auth1/presentation/pages/login_screen.dart';
-import 'package:team1/screen/home.dart'; // شاشة الهوم — عدل المسار إذا لازم
+import 'package:team1/screen/home.dart';
+
+import 'screen/AnimatedNavExample.dart'; // شاشة الهوم — عدل المسار إذا لازم
 
 class Sp extends StatefulWidget {
   const Sp({super.key});
@@ -30,7 +32,7 @@ class _SpState extends State<Sp> {
       // ✔ إذا فيه توكن → الهوم
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const Home()),
+        MaterialPageRoute(builder: (_) =>   AnimatedNavExample()),
       );
     } else {
       // ✔ إذا ما فيه توكن → لوجن
@@ -44,7 +46,7 @@ class _SpState extends State<Sp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1F0055),
+      backgroundColor: const Color(0xFF129AA6),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -55,7 +57,7 @@ class _SpState extends State<Sp> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 image: const DecorationImage(
-                  image: AssetImage('assets/rt.png'),
+                  image: AssetImage('assets/Online_LS__1_-removebg-preview.png'),
                   fit: BoxFit.cover,
                 ),
               ),

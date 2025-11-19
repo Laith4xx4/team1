@@ -34,9 +34,7 @@ class AuthRepositoryImpl implements AuthRepository {
     );
     // For register, assuming minimal info returned, might need to fetch user details or infer
     return UserModel(
-      id:
-          responseData['id'] ??
-          '', // Placeholder, might need a real ID from API or generate one
+      id: responseData['id'] ?? '', // Placeholder, might need a real ID from API or generate one
       email: email,
       role: responseData['role'] ?? role,
       token: responseData['token'], // Might be null for registration
